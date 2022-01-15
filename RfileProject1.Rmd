@@ -1,0 +1,21 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r}
+link="https://github.com/SamHenkels47/Project-1/raw/main/R%20sheet.xlsx"
+
+library(rio)
+mydata=import(link)
+
+```
+
+```{r}
+library(ggplot2)
+base=ggplot(data=mydata,aes(x=Country,y=SEMI_EXPORTS ))
+base+geom_bar(stat="identity")
+```
+
