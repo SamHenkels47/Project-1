@@ -19,7 +19,7 @@ base=ggplot(data=mydata,aes(x=Country,y=SEMI_EXPORTS ))
 base+geom_bar(stat="identity")
 ```
 ```{r}
-plot1 = base + geom_bar(fill ="gray",
+plot1 = base + geom_bar(fill ="dark gray",
                         stat = 'identity') 
 plot1
 ```
@@ -28,13 +28,21 @@ titleText='Semiconductor Exports from Oregon in 2021'
 sourceText='Source: US Census Bureau'
 
 plot2 = plot1 + labs(title=titleText,
-                     x ="Country", 
-                     y = "Exports in Millions",
+                     x ="Export Desintation", 
+                     y = "Exports in $ Billions",
                      caption = sourceText) 
+
 plot2
 
 ```
 ```{r}
-plot3 = plot2 
+plot3 = plot2 + theme(plot.caption = element_text(hjust = 0), 
+                      plot.title = element_text(hjust = 0.5))
 plot3
+```
+
+```{r}
+plot4 = plot3 +  geom_text(aes(label = SEMI_EXPORTS), vjust = -0.1)
+
+plot4
 ```
