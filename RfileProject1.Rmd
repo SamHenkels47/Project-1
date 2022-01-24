@@ -1,7 +1,7 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 
@@ -29,7 +29,7 @@ sourceText='Source: US Census Bureau'
 
 plot2 = plot1 + labs(title=titleText,
                      x ="Country", 
-                     y = "Exports in Billions",
+                     y = "Exports in Millions",
                      caption = sourceText) 
 plot2
 
