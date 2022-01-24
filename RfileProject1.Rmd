@@ -1,7 +1,7 @@
 ---
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 
@@ -14,9 +14,16 @@ mydata=import(link)
 ```
 
 ```{r}
+order(mydata$SEMI_EXPORTS)
+
+```
+
+
+```{r}
 library(ggplot2)
 base=ggplot(data=mydata,aes(x=Country,y=SEMI_EXPORTS ))
 base+geom_bar(stat="identity")
+
 ```
 ```{r}
 plot1 = base + geom_bar(fill ="dark gray",
