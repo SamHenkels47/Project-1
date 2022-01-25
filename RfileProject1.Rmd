@@ -13,20 +13,17 @@ mydata=import(link)
 
 ```
 
-```{r}
-order(mydata$SEMI_EXPORTS)
-
-```
-
 
 ```{r}
 library(ggplot2)
 base=ggplot(data=mydata,aes(x=Country,y=SEMI_EXPORTS ))
 base+geom_bar(stat="identity")
 
+base1= base + theme_classic()
+
 ```
 ```{r}
-plot1 = base + geom_bar(fill ="dark gray",
+plot1 = base1 + geom_bar(fill ="dark gray",
                         stat = 'identity') 
 plot1
 ```
