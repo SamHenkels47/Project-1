@@ -10,18 +10,18 @@ link="https://github.com/SamHenkels47/Project-1/raw/main/R%20sheet.xlsx"
 
 library(rio)
 mydata=import(link)
-
 ```
 
+```{r}
+mydata1=mydata[order(-mydata$SEMI_EXPORTS),]
+```
 
 ```{r}
 library(ggplot2)
-base=ggplot(data=mydata,aes(x=Country,y=SEMI_EXPORTS ))
-base+geom_bar(stat="identity")
-
+base=ggplot(data=mydata1,aes(x=Country,y=SEMI_EXPORTS ))+scale_x_discrete(limits=mydata1$Country)
 base1= base + theme_classic()
-
 ```
+
 ```{r}
 plot1 = base1 + geom_bar(fill ="dark gray",
                         stat = 'identity') 
@@ -32,7 +32,7 @@ titleText='Semiconductor Exports from Oregon in 2021'
 sourceText='Source: US Census Bureau'
 
 plot2 = plot1 + labs(title=titleText,
-                     x ="Export Desintation", 
+                     x ="Export Destination", 
                      y = "Exports in $ Billions",
                      caption = sourceText) 
 
