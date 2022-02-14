@@ -1,0 +1,43 @@
+---
+title: "Examination of Exports from Oregon"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart 1
+
+```{r}
+library(ggplot2)
+myWeb="https://github.com/SamHenkels47/samhenkels2/raw/main/"
+someVars=readRDS(file=url(paste0(myWeb,"chart2.rds")))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart 2
+
+```{r}
+library(ggplot2)
+myWeb="https://github.com/SamHenkels47/Project-1/raw/main/"
+someVars=readRDS(file=url(paste0(myWeb,"chart1.rds")))
+
+```
+
+### Map 1
+
+```{r}
+library(ggplot2)
+myWeb="https://github.com/SamHenkels47/project3/raw/main/"
+someVars=readRDS(file=url(paste0(myWeb,"Map1.rds")))
+```
+
