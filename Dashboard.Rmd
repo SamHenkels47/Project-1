@@ -17,8 +17,10 @@ Column {data-width=650}
 
 ```{r}
 library(ggplot2)
-myWeb="https://github.com/SamHenkels47/samhenkels2/raw/main/"
-someVars=readRDS(file=url(paste0(myWeb,"chart2.rds")))
+myWeb="https://github.com/SamHenkels47/Project-1/raw/main/"
+someVars=readRDS(file=url(paste0(myWeb,"chart1.rds")))
+plot(someVars)
+
 ```
 
 Column {data-width=350}
@@ -28,9 +30,9 @@ Column {data-width=350}
 
 ```{r}
 library(ggplot2)
-myWeb="https://github.com/SamHenkels47/Project-1/raw/main/"
+myWeb="
 someVars=readRDS(file=url(paste0(myWeb,"chart1.rds")))
-
+plot(someVars)
 ```
 
 ### Map 1
@@ -39,5 +41,6 @@ someVars=readRDS(file=url(paste0(myWeb,"chart1.rds")))
 library(ggplot2)
 myWeb="https://github.com/SamHenkels47/project3/raw/main/"
 someVars=readRDS(file=url(paste0(myWeb,"Map1.rds")))
+plot(someVars)
 ```
 

@@ -56,6 +56,7 @@ plot4
 plot5 = plot4 + coord_flip()
 plot5
 ```
+
 ```{r}
 saveRDS(plot5,file = 'chart1.rds')
 saveRDS(plot5,file='chart1.rds')
