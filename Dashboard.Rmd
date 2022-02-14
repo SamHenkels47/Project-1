@@ -13,7 +13,7 @@ library(flexdashboard)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart 1
+### Export Catagories 2010-2020
 
 ```{r}
 
@@ -26,22 +26,22 @@ plot(someVars)
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart 2
-
-```{r}
-library(ggplot2)
-myWeb="https://github.com/SamHenkels47/Project-1/raw/main/"
-someVars=readRDS(file=url(paste0(myWeb,"chart1.rds")))
-plot(someVars)
-
-```
-
-### Map 1
+### Map of Export Destinations 2010-2020
 
 ```{r}
 library(ggplot2)
 myWeb="https://github.com/SamHenkels47/project3/raw/main/"
 someVars=readRDS(file=url(paste0(myWeb,"Map1.rds")))
+plot(someVars)
+
+```
+
+### Export Destinations of Oregon's Largest Export Product - Semiconductors
+
+```{r}
+library(ggplot2)
+myWeb="https://github.com/SamHenkels47/Project-1/raw/main/"
+someVars=readRDS(file=url(paste0(myWeb,"chart1.rds")))
 plot(someVars)
 ```
 
