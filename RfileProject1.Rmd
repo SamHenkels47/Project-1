@@ -18,13 +18,15 @@ mydata1=mydata[order(-mydata$SEMI_EXPORTS),]
 
 ```{r}
 library(ggplot2)
-base=ggplot(data=mydata1,aes(x=Country,y=SEMI_EXPORTS ))+scale_x_discrete(limits=mydata1$Country)
+base=ggplot(data=mydata1,aes(x=Country,y=SEMI_EXPORTS,fill=Country ))+scale_x_discrete(limits=mydata1$Country)
 base1= base + theme_classic()
+
+
+
 ```
 
 ```{r}
-plot1 = base1 + geom_bar(fill ="dark gray",
-                        stat = 'identity') 
+plot1 = base1 + geom_bar(stat = 'identity') 
 plot1
 ```
 ```{r}
@@ -46,7 +48,12 @@ plot3
 ```
 
 ```{r}
-plot4 = plot3 +  geom_text(aes(label = SEMI_EXPORTS), vjust = -0.1)
+plot4 = plot3 +  geom_text(aes(label = SEMI_EXPORTS), nudge_y = .3)
 
 plot4
 ```
+```{r}
+plot5 = plot4 + coord_flip()
+plot5
+```
+
