@@ -62,7 +62,8 @@ plot6
 ```
 
 ```{r}
-saveRDS(plot6,file = 'chart1.rds')
-saveRDS(plot6,file='chart1.rds')
+plot6
+saveRDS(plot6,file = 'chart2.rds')
+saveRDS(plot6,file='chart2.rds')
 
 ```
