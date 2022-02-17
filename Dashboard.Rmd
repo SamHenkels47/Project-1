@@ -41,7 +41,7 @@ plot(someVars)
 ```{r}
 library(ggplot2)
 myWeb="https://github.com/SamHenkels47/Project-1/raw/main/"
-someVars=readRDS(file=url(paste0(myWeb,"chart1.rds")))
+someVars=readRDS(file=url(paste0(myWeb,"chart2.rds")))
 plot(someVars)
 ```
 
