@@ -36,7 +36,7 @@ plot(someVars)
 
 ```
 
-### Export Destinations of Oregon's Largest Export Product - Semiconductors
+###Destination of Oregon's Largest Export Product - Semiconductors
 
 ```{r}
 library(ggplot2)
